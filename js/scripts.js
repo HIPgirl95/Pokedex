@@ -8,4 +8,12 @@ let pokemonList = [
 
 for (let i=0 ; i < pokemonList.length ; i++) {
     document.write(pokemonList[i].name + "(Height: " + pokemonList[i].height + ")")
+    if (pokemonList[i].height > 150) {
+        document.write(" Wow! This pokemon is huge!" + "<br>")
+    } else if (pokemonList[i].height <= 80) {
+        document.write(" Aww! This pokemon is so tiny!" + "<br>")
+    } else {
+        document.write(" This pokemon is a pretty average size." + "<br>")
+    }
+
 }
