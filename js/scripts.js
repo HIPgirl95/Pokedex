@@ -10,9 +10,9 @@ let pokemonList = [
 for (let i=0 ; i < pokemonList.length ; i++) {
     document.write(pokemonList[i].name + "(Height: " + pokemonList[i].height + ")<br>")
     // Custom comments for varying pokemon heights
-    if (pokemonList[i].height >= 200) {
-        document.write(" Wow! This pokemon is huge!" + "<br><br>")
-    } else if (pokemonList[i].height <= 80) {
+    if (pokemonList[i].height >= 250) {
+        document.write(" Wow, that's big!" + "<br><br>")
+    } else if (pokemonList[i].height < 80) {
         document.write(" Aww! This pokemon is so tiny!" + "<br><br>")
     } else {
         document.write("<br>")
