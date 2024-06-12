@@ -6,8 +6,10 @@ let pokemonList = [
     {name: 'Lapras', height: 250, canEvolve: false, types: ['ice', 'water']}
 ]
 
+// A loop that writes the pokemon's name and height
 for (let i=0 ; i < pokemonList.length ; i++) {
     document.write(pokemonList[i].name + "(Height: " + pokemonList[i].height + ")")
+    // Custom comments for varying pokemon heights
     if (pokemonList[i].height > 150) {
         document.write(" Wow! This pokemon is huge!" + "<br>")
     } else if (pokemonList[i].height <= 80) {
@@ -15,5 +17,4 @@ for (let i=0 ; i < pokemonList.length ; i++) {
     } else {
         document.write(" This pokemon is a pretty average size." + "<br>")
     }
-
 }
