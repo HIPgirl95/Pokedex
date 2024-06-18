@@ -7,14 +7,14 @@ let pokemonList = [
 ]
 
 // A loop that writes the pokemon's name and height
-for (let i=0 ; i < pokemonList.length ; i++) {
-    document.write(pokemonList[i].name + "(Height: " + pokemonList[i].height + ")<br>")
+pokemonList.forEach(function(pokemon) {
+    document.write("<p>" + pokemon.name + " (Height: " + pokemon.height + "cm)<br>");
     // Custom comments for varying pokemon heights
-    if (pokemonList[i].height >= 250) {
-        document.write(" Wow, that's big!" + "<br><br>")
-    } else if (pokemonList[i].height < 80) {
-        document.write(" Aww! This pokemon is so tiny!" + "<br><br>")
+    if (pokemon.height >= 250) {
+        document.write(" Wow, that's big!" + "</p>")
+    } else if (pokemon.height < 80) {
+        document.write(" Aww! This pokemon is so tiny!" + "</p>")
     } else {
-        document.write("<br>")
+        document.write("</p>")
     }
-}
+});
