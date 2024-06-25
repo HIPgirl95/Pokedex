@@ -1,12 +1,24 @@
 * {
-    font-size: larger;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    justify-content: center;
 }
 
 h1 {
     font-size: 40px;
 }
 
+ul {
+    list-style: none;
+    margin: auto;
+    padding: 0px;
+}
+
 .pokemon-info {
+   font-size: 32px;
    background-color: #f4fff4;
    border-radius: 5%;
    margin: 3px;
@@ -17,4 +29,22 @@ h1 {
 
 .pokemon-info:hover {
     cursor: pointer;
+}
+
+@media all and (max-width:500px) {
+    .pokemon-info {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 768px) {
+    .pokemon-info {
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 30px;
+    }
 }
