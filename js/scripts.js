@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
 
-    let pokemonList = [
+    let pokemons = [
         {name: 'Bulbasaur', height: 70, canEvolve: true, types: ['grass', 'poison']},
         {name: 'Ivysaur', height: 100, canEvolve: true, types: ['grass', 'poison']},
         {name: 'Venusaur', height: 200, canEvolve: false, types: ['grass', 'poison']},
@@ -9,11 +9,11 @@ let pokemonRepository = (function () {
     ]
 
     function add(pokemon) {
-        pokemonList.push(pokemon)
+        pokemons.push(pokemon)
     }
 
     function getAll() {
-        return pokemonList;
+        return pokemons;
     }
 
     return {
@@ -24,13 +24,11 @@ let pokemonRepository = (function () {
 
 // A loop that writes the pokemon's name and height
 pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write("<p>" + pokemon.name + " (Height: " + pokemon.height + "cm)<br>");
-    // Custom comments for varying pokemon heights
-    if (pokemon.height >= 250) {
-        document.write(" Wow, that's big!" + "</p>")
-    } else if (pokemon.height < 80) {
-        document.write(" Aww! This pokemon is so tiny!" + "</p>")
-    } else {
-        document.write("</p>")
-    }
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('get-pokemon-info');
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
 });
