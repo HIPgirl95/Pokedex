@@ -25,12 +25,20 @@ let pokemonRepository = (function () {
         button.classList.add('pokemon-info');
         listItem.appendChild(button);
         pokemonList.appendChild(listItem);
+        listItem.addEventListener('click', function(event) {
+        pokemonRepository.showDetails(pokemon)
+        });
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon.name)
     }
 
     return {
         add: add,
         getAll: getAll,
         addListItem: addListItem,
+        showDetails: showDetails
     };
 })();
 
