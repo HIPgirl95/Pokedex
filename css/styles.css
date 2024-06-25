@@ -2,6 +2,19 @@
     font-size: larger;
 }
 
+h1 {
+    font-size: 40px;
+}
+
 .pokemon-info {
-    background-color: grey;
+   background-color: #f4fff4;
+   border-radius: 5%;
+   margin: 3px;
+   padding: 5px;
+   border-width: 3px;
+   border-color: rgba(38, 112, 80, 0.6);
+}
+
+.pokemon-info:hover {
+    cursor: pointer;
 }
