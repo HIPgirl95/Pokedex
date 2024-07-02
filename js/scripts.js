@@ -2,6 +2,7 @@ let pokemonRepository = (function () {
 
     let pokemons = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=25';
+    let modalContainer = document.querySelector('#modal-container');
 
 
     function add(pokemon) {
@@ -12,6 +13,12 @@ let pokemonRepository = (function () {
         return pokemons;
     }
     
+    function showDetails(pokemon) {
+        loadDetails(pokemon).then(function() {
+            console.log(pokemon);
+        });
+    }
+
     function addListItem(pokemon) {
         let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
@@ -52,12 +59,6 @@ let pokemonRepository = (function () {
         }).catch(function (e) {
             console.error(e);
         })
-    }
-
-    function showDetails(pokemon) {
-        loadDetails(pokemon).then(function() {
-            console.log(pokemon);
-        });
     }
 
     return {
