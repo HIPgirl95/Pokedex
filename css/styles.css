@@ -4,11 +4,16 @@
 
 body {
     display: grid;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 100px;
 }
 
 h1 {
     font-size: 40px;
+}
+
+p {
+    font-size: 30px;
 }
 
 ul {
@@ -55,10 +60,11 @@ ul {
     display: inline-block;
     box-sizing: border-box;
     background: #fff;
-    padding: 15px;
-    width: 50%;
+    padding-top: 5px;
+    width: 40%;
     max-width: 700px;
-    text-align: left;
+    text-align: center;
+    border: solid black 2px;
 }
 
 .modal-close {
