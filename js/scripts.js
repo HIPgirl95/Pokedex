@@ -101,6 +101,10 @@ let pokemonRepository = (function () {
         modalContainer.classList.add('is-visible');
     }
 
+    function hideModal() {
+        modalContainer.classList.remove('is-visible');
+    }
+
     return {
         add: add,
         getAll: getAll,
