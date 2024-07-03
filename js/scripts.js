@@ -99,11 +99,24 @@ let pokemonRepository = (function () {
         modalContainer.appendChild(modal);
 
         modalContainer.classList.add('is-visible');
+
+        modalContainer.addEventListener('click', (e) => {
+            let target = e.target;
+            if (target === modalContainer) {
+                hideModal();
+            }
+        });
     }
 
     function hideModal() {
         modalContainer.classList.remove('is-visible');
     }
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+            hideModal();
+        }
+    });
 
     return {
         add: add,
