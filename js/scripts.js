@@ -15,7 +15,7 @@ let pokemonRepository = (function () {
     
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function() {
-           showModal(
+            showModal(
             pokemon.name, 
             'Height: ' + pokemon.height,
             pokemon.imageUrl
@@ -29,10 +29,6 @@ let pokemonRepository = (function () {
         let button = document.createElement('button');
         button.innerText = pokemon.name;
         button.classList.add('pokemon-info');
-
-        let imageElement = document.createElement('img');
-        imageElement.classList.add('image');
-        imageElement.src = pokemon.imageUrl;
 
         listItem.appendChild(button);
         pokemonList.appendChild(listItem);
