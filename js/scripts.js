@@ -29,8 +29,9 @@ let pokemonRepository = (function () {
         let button = document.createElement('button');
         button.innerText = pokemon.name;
         button.classList.add('pokemon-info', 'btn', 'btn-primary');
-        button.setAttribute('data-toggle', 'modal');
-        button.setAttribute('data-target','#detailsModal')
+        button.setAttribute('data-bs-toggle', 'modal');
+        button.setAttribute('data-bs-target','#detailsModal');
+        button.classList.add('list-group-item');
 
         let imageElement = document.createElement('img');
         imageElement.classList.add('image');
