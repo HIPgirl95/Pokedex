@@ -17,7 +17,7 @@ let pokemonRepository = (function () {
         loadDetails(pokemon).then(function() {
            showModal(
             pokemon.name, 
-            'Height: ' + pokemon.height,
+            'Height: ' + pokemon.height*10 + 'cm',
             pokemon.imageUrl
            );
         });
@@ -72,54 +72,16 @@ let pokemonRepository = (function () {
             console.error(e);
         })
     }
+    function showModal(title, text, img) {
+        let modalTitle = document.querySelector('.modal-title');
+        let modalBody = document.querySelector('.modal-body');
+        let modalText = document.querySelector('#pokemon-height');
+        let modalImage = document.querySelector('#pokemon-image');
 
-    // function showModal(title, text, img) {
-    //     modalContainer.innerHTML = '';
-
-    //     let modal = document.createElement('div');
-    //     modal.classList.add('modal');
-
-    //     let closeButtonElement = document.createElement('button');
-    //     closeButtonElement.classList.add('modal-close');
-    //     closeButtonElement.innerText = "Close";
-    //     closeButtonElement.addEventListener('click', hideModal);
-
-    //     let pokemonName = document.createElement('h1');
-    //     pokemonName.innerText = title;
-
-    //     let pokemonHeight = document.createElement('p');
-    //     pokemonHeight.innerText = text;
-
-    //     let pokemonImage = document.createElement('img');
-    //     pokemonImage.setAttribute('src', img);
-    //     pokemonImage.setAttribute("width", "100%");
-    //     pokemonImage.setAttribute("height", "100%");
-
-    //     modal.appendChild(closeButtonElement);
-    //     modal.appendChild(pokemonName);
-    //     modal.appendChild(pokemonHeight);
-    //     modal.appendChild(pokemonImage);
-    //     modalContainer.appendChild(modal);
-
-    //     modalContainer.classList.add('is-visible');
-
-    //     modalContainer.addEventListener('click', (e) => {
-    //         let target = e.target;
-    //         if (target === modalContainer) {
-    //             hideModal();
-    //         }
-    //     });
-    // }
-
-    // function hideModal() {
-    //     modalContainer.classList.remove('is-visible');
-    // }
-
-    // window.addEventListener('keydown', (e) => {
-    //     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-    //         hideModal();
-    //     }
-    // });
+        modalTitle.innerText = title;
+        modalText.innerText = text;
+        modalImage.src = img;
+    }
 
     return {
         add: add,
