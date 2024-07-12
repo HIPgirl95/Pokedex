@@ -2,8 +2,6 @@ let pokemonRepository = (function () {
 
     let pokemons = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=25';
-    let modalContainer = document.querySelector('#modal-container');
-
 
     function add(pokemon) {
         pokemons.push(pokemon)
