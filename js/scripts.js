@@ -36,7 +36,7 @@ let pokemonRepository = (function () {
       .then((json) => {
         json.results.forEach((pok) => {
           let pokemon = {
-            name: pok.name,
+            name: pok.name.charAt(0).toUpperCase() + pok.name.slice(1),
             detailsUrl: pok.url,
           };
           pokemons.push(pokemon);

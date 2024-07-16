@@ -1,3 +1,8 @@
+:root {
+  --border-color: rgba(38, 112, 80, 0.6);
+  --background-color: #f4fff4;
+}
+
 ul {
   list-style: none;
   margin: auto;
@@ -6,12 +11,11 @@ ul {
 
 .pokemon-info {
   font-size: 32px;
-  background-color: #f4fff4;
-  border-radius: 5%;
+  background-color: var(--background-color);
   margin: 3px;
   padding: 5px;
   border-width: 3px;
-  border-color: rgba(38, 112, 80, 0.6);
+  border-color: var(--border-color);
 }
 
 .pokemon-info:hover .modal-close:hover {
@@ -26,4 +30,23 @@ ul {
 
 h1 {
   justify-content: center;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: var(--background-color);
+}
+
+.btn-secondary {
+  background-color: #c43b3b;
+  border-color: black;
+}
+
+#pokemon-height {
+  font-size: x-large;
+  align-content: center;
+}
+
+#pokemon-image {
+  border: solid var(--border-color) 3px;
 }
