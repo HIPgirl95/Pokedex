@@ -1,7 +1,3 @@
-body {
-    margin-left: 100px;
-}
-
 ul {
     list-style: none;
     margin: auto;
@@ -26,4 +22,8 @@ ul {
     background-color: lightgreen;
     border-color: black;
     color: black;
+}
+
+h1 {
+    justify-content: center;
 }

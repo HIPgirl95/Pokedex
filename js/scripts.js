@@ -1,7 +1,7 @@
 let pokemonRepository = (function () {
 
     let pokemons = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=25';
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=24';
 
     function add(pokemon) {
         pokemons.push(pokemon)
@@ -26,10 +26,11 @@ let pokemonRepository = (function () {
         let listItem = document.createElement('li');
         let button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('pokemon-info', 'btn', 'btn-primary');
+        button.classList.add('pokemon-info', 'btn', 'btn-primary', 'col-12');
         button.setAttribute('data-bs-toggle', 'modal');
         button.setAttribute('data-bs-target','#detailsModal');
         button.classList.add('list-group-item');
+        listItem.classList.add('col-lg-4', 'col-sm-6')
 
         listItem.appendChild(button);
         pokemonList.appendChild(listItem);
